@@ -27,7 +27,7 @@ def create_single_plot_one(ip, FinalSeries, Pass, curdir, out_basename, prefix_n
         ax.errorbar(FinalSeries[:,1],FinalSeries[:,4],FinalSeries[:,5],uplims=True,lolims=True, markersize='6', ecolor='red',capsize=4, elinewidth=3)
         ax.grid(linestyle='--')
         ax.set_xlabel('Year',fontsize=28)
-        ax.set_ylabel('Water Elevation w.r.t WGS84 (m)',fontsize=28)
+        ax.set_ylabel('Water Elevation w.r.t EGM08 Geoid (m)',fontsize=28)
         ax.set_title('Line Plot with Error Bars')
         ax.set_title('Jason-{} series. {} method. \n Path # {}; Lat = [{} : {}], Lon = [{} : {}]'.format(Series, prefix_name, Pass, min_lat, max_lat, min_lon, max_lon),fontsize=26)
         plt.rcParams['font.size'] = '26' 
@@ -51,7 +51,7 @@ def create_single_plot_one(ip, FinalSeries, Pass, curdir, out_basename, prefix_n
         ax.scatter(FinalSeries[:,1], elevation_corr, color='black')
         ax.grid(linestyle='--')
         ax.set_xlabel('Year',fontsize=28)
-        ax.set_ylabel('Water Elevation w.r.t WGS84 (m)',fontsize=28)
+        ax.set_ylabel('Water Elevation w.r.t EGM08 Geoid (m)',fontsize=28)
         ax.set_title('Line Plot with Error Bars')
         ax.set_title('Jason-{} series. {} method. \n Path # {}; Lat = [{} : {}], Lon = [{} : {}]'.format(Series, prefix_name, Pass, min_lat, max_lat, min_lon, max_lon),fontsize=26)
         plt.rcParams['font.size'] = '26' 
@@ -75,7 +75,7 @@ def create_single_plot_both(ip2, ip3, FinalSeries2, FinalSeries3, Pass, curdir, 
         ax.errorbar(FinalSeries3[:,1],FinalSeries3[:,4],FinalSeries3[:,5],uplims=True,lolims=True, markersize='3', ecolor='black',capsize=2, elinewidth=1)
         ax.grid(linestyle='--')
         ax.set_xlabel('Year',fontsize=28)
-        ax.set_ylabel('Water Elevation w.r.t WGS84 (m)',fontsize=28)
+        ax.set_ylabel('Water Elevation w.r.t EGM08 Geoid (m)',fontsize=28)
         ax.set_title('Line Plot with Error Bars')
         ax.set_title('Jason 2 & 3 series. {} method. \n Path # {}; Lat = [{} : {}], Lon = [{} : {}]'.format(prefix_name, Pass, min_lat, max_lat, min_lon, max_lon),fontsize=26)
         plt.rcParams['font.size'] = '26' 
@@ -106,7 +106,7 @@ def create_single_plot_both(ip2, ip3, FinalSeries2, FinalSeries3, Pass, curdir, 
         ax.scatter(FinalSeries3[:,1], elevation_corr3, color='black')
         ax.grid(linestyle='--')
         ax.set_xlabel('Year',fontsize=28)
-        ax.set_ylabel('Water Elevation w.r.t WGS84 (m)',fontsize=28)
+        ax.set_ylabel('Water Elevation w.r.t EGM08 Geoid (m)',fontsize=28)
         plt.xticks(fontsize=24)
         plt.yticks(fontsize=24)
         ax.set_title('Line Plot with Error Bars')
@@ -157,7 +157,7 @@ def compare_plot_one(ip, FinalSeries_list, Pass, list_of_methods, curdir, out_ba
     
     ax.grid(linestyle='--')
     ax.set_xlabel('Year',fontsize=28)
-    ax.set_ylabel('Water Elevation w.r.t WGS84 (m)',fontsize=28)
+    ax.set_ylabel('Water Elevation w.r.t EGM08 Geoid (m)',fontsize=28)
     ax.set_title('Line Plot with Error Bars')
     ax.set_title('Jason-{} series. \n Path # {}; Lat = [{} : {}], Lon = [{} : {}]'.format(Series, Pass, min_lat, max_lat, min_lon, max_lon),fontsize=26)
     plt.rcParams['font.size'] = '26' 
@@ -226,7 +226,7 @@ def compare_plot_both(ip2,ip3, FinalSeries_list_2, FinalSeries_list_3,Pass, list
             
     ax.grid(linestyle='--')
     ax.set_xlabel('Year',fontsize=28)
-    ax.set_ylabel('Water Elevation w.r.t WGS84 (m)',fontsize=28)
+    ax.set_ylabel('Water Elevation w.r.t EGM08 Geoid (m)',fontsize=28)
     ax.set_title('Line Plot with Error Bars')
     ax.set_title('Jason-2 & 3 series. \n Path # {}; Lat = [{} : {}], Lon = [{} : {}]'.format(Pass, min_lat, max_lat, min_lon, max_lon),fontsize=26)
     plt.rcParams['font.size'] = '26' 
